@@ -1,4 +1,7 @@
 {
+    "/js/admin-lte.js": "/js/admin-lte.js",
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/public/js/jquery_all.js": "/public/js/jquery_all.js",
+    "/css/app.css": "/css/app.css",
+    "/css/admin-lte.css": "/css/admin-lte.css"
 }
