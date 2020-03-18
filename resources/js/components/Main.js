@@ -5,6 +5,7 @@
 import React, { Component } from 'react';
 import NavigationBar from './NavigationBar';
 import Sidebar from './Sidebar';
+import Content from './Content';
 // Tempusdominus Bbootstrap 4
 import 'admin-lte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css';
 import 'admin-lte/plugins/jqvmap/jqvmap.min.css';
@@ -45,6 +46,9 @@ const Main = () => {
       {/* Main Sidebar Container */}
       <Sidebar />
       {/* /.Main Sidebar Container */}
+
+      {/* Content Wrapper. Contains page content */}
+      <Content />
     </div>
   );
 }
