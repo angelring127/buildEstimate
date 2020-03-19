@@ -1,4 +1,8 @@
 {
   "project_title":"Build Estimate",
-  "dashboard":"Dashboard"
+  "dashboard":"Dashboard",
+  "login_btn":"ログイン",
+  "login_msg":"ログインして下さい。",
+  "search_password_link":"パスワード探す",
+  "save":"保存"
 }
