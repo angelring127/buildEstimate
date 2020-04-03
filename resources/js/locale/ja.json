@@ -4,5 +4,9 @@
   "login_btn":"ログイン",
   "login_msg":"ログインして下さい。",
   "search_password_link":"パスワード探す",
-  "save":"保存"
+  "save":"保存",
+  "login_id.placeholder":"メール",
+  "login_password.placeholder":"パスワード"
+
+
 }

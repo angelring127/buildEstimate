@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->integer('authority')->comment('ユーザー権限');
             $table->string('password')->comment('パスワード');
+            $table->string('api_token', 80)->unique()->nullable()->default(null)->comment('APIトークン');
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes()->comment('削除状態');

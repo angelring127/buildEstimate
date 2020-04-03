@@ -4,5 +4,7 @@
   "login_btn":"login",
   "login_msg":"Sign in to start your session",
   "save":"Remember me",
-  "search_password_link":"search password"
+  "search_password_link":"search password",
+  "mail_id.placeholder":"mail address",
+  "login_password.placeholder":"password"
 }

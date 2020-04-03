@@ -32,7 +32,7 @@ const selectMessages = typeof messages[language] !== 'undefined' ? messages[lang
 if (document.getElementById('login')) {
     ReactDOM.render(
         <Provider store={store}>
-            <IntlProvider locale={language} messages={selectMessages}>
+            <IntlProvider locale="ja" messages={messages_ja}>
                 <PageContainer />
             </IntlProvider>
         </Provider>
