@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('name')->comment('ユーザー名前');
             $table->string('email')->unique()->comment('ユーザーメール');
             $table->timestamp('email_verified_at')->nullable();
-            $table->integer('authority')->comment('ユーザー権限');
+            // $table->integer('authority')->comment('ユーザー権限');
             $table->string('password')->comment('パスワード');
             $table->string('api_token', 80)->unique()->nullable()->default(null)->comment('APIトークン');
             $table->rememberToken();

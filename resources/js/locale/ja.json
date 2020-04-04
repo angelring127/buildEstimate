@@ -6,7 +6,13 @@
   "search_password_link":"パスワード探す",
   "save":"保存",
   "login_id.placeholder":"メール",
-  "login_password.placeholder":"パスワード"
-
-
+  "login_password.placeholder":"パスワード",
+  "register.title":"登録",
+  "register.comment":"情報を登録して下さい。",
+  "register.name":"名前",
+  "register.email":"メール",
+  "register.password":"パスワード",
+  "register.check_password":"パスワード確認",
+  "register.btn_register":"登録",
+  "register.authority":"権限"
 }

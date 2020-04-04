@@ -2,10 +2,29 @@
  * Login.js
  * ログイン画面
  */
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import {FormattedMessage} from 'react-intl';
 
+import * as Api from '../services/API';
+
 const Login = () => {
+  const [loginInfo, setLoginInfo] = useState({});
+
+  const onChnageInput = event => {
+    const currentTarget = event.currentTarget;
+    loginInfo[currentTarget.name] = currentTarget.value;
+    
+    setLoginInfo(loginInfo);
+  }
+  const handlerLogin = (event) => {
+    Api.login(loginInfo)
+      .then(res => {
+        console.log(res);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  };
   return (
     <div className="login-box">
       <div className="login-logo">
@@ -16,7 +35,7 @@ const Login = () => {
           <p className="login-box-msg"><FormattedMessage id="login_msg" defaultMessage="ログインして下さい。" /></p>
           <div className="input-group mb-3">
           <FormattedMessage id="login_id.placeholder"　defaultMessage="Email">
-            { placeholder => <input type="email" className="form-control" placeholder={placeholder} />}
+            { placeholder => <input name="email" type="email" className="form-control" onChange={onChnageInput} placeholder={placeholder} />}
           </FormattedMessage>
             <div className="input-group-append">
               <div className="input-group-text">
@@ -26,7 +45,7 @@ const Login = () => {
           </div>
           <div className="input-group mb-3">
             <FormattedMessage id="login_password.placeholder"　defaultMessage="Password">
-              {placeholder => <input type="password" className="form-control" placeholder={placeholder}></input>}
+              {placeholder => <input name="password" type="password" className="form-control" onChange={onChnageInput} placeholder={placeholder}></input>}
             </FormattedMessage>
             <div className="input-group-append">
               <div className="input-group-text">
@@ -45,7 +64,7 @@ const Login = () => {
             </div>
             {/* /.col */}
             <div className="col-4">
-              <button type="button" className="btn btn-primary btn-block"><FormattedMessage id="login_btn" defaultMessage="login"/></button>
+              <button type="button" onClick={handlerLogin} className="btn btn-primary btn-block"><FormattedMessage id="login_btn" defaultMessage="login"/></button>
             </div>
             {/* /.col */}
           </div>
